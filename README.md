@@ -1,7 +1,7 @@
 # FlowCarp
 FlowCarp identifies application-layer protocols in network traffic based on behavior instead of port numbers. FlowCarp reads packet data in the form of PCAP, PcapNG or TZSP streams and outputs information about the flows it finds, including the detected application layer protocol for each flow.
 
-<img src="https://flowcarp.com/images/FlowCarp_2000x2000.webp" alt="FlowCarp logo" style="float: right; width: 30%; height: auto; margin: 3%;" />
+<img src="https://flowcarp.com/images/FlowCarp_2000x2000.webp" alt="FlowCarp logo" width="400" alt="FlowCarp logo" style="max-width: 20%; height: auto;" />
 
 More information about FlowCarp can be found on the [official FlowCarp website](https://flowcarp.com/).
 
