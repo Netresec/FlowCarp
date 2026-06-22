@@ -7,4 +7,9 @@ To install docker container from command line:
 
 `docker pull ghcr.io/netresec/flowcarp:latest`
 
-Or use the [docker-compose.yml](docker-compose.yml)
+Or better yet, use our [docker-compose.yml](docker-compose.yml) to install the docker container:
+```
+curl -sSL https://github.com/Netresec/FlowCarp/blob/main/docker-compose.yml -o docker-compose.yml
+docker compose build
+docker compose up
+```
