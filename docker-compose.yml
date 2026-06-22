@@ -1,0 +1,33 @@
+services:
+  flowcarp:
+    image: ghcr.io/netresec/flowcarp:0.8.5
+    container_name: flowcarp
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:rw,mode=1777,size=64m
+      - /home/flowcarp/.local/share:rw,mode=1777,size=100m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    ports:
+      - "80:57080/tcp"
+      #- "37008:37008/udp"
+      #- "57012:57012/tcp"
+      #- "57020:57020/tcp"
+    environment:
+      - HOME=/home/flowcarp
+      - TMPDIR=/tmp
+      - FC_WEBSERVICE=http://+:57080/
+      #- FC_INPUT=tzsp:37008
+      #- FC_INPUT=tcp:57012
+      #- FC_OUTPUT=tcp:57020
+      - FC_FORMAT=EveJson
+      - FC_VERBOSE=1
+    user: "flowcarp:flowcarp"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f --max-time 5 http://127.0.0.1:57080/ || exit 1"]
+      interval: 300s
+      timeout: 10s
+      retries: 3
