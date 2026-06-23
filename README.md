@@ -16,10 +16,6 @@ curl -fsSL https://raw.githubusercontent.com/Netresec/FlowCarp/refs/heads/main/d
 docker compose up -d
 ```
 
-# Download Binaries
-
-Pre-compiled binaries for Linux, macOS and Windows can be downloaded from the [official FlowCarp website](https://flowcarp.com/).
-
 # Environment Variables
 
 The following environment variables can be set to configure FlowCarp.
