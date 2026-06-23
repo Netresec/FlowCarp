@@ -13,8 +13,7 @@ Install docker container from command line:
 Or better yet, use our [docker-compose.yml](docker-compose.yml) to install the docker container:
 ```
 curl -sSL https://github.com/Netresec/FlowCarp/raw/refs/heads/main/docker-compose.yml -o docker-compose.yml
-docker compose build
-docker compose up
+docker compose up -d
 ```
 
 # Download Binaries
